@@ -1,5 +1,125 @@
-<!docutype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K0DFPKH2NM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K0DFPKH2NM');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+        }
+        legend {
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 3px 10px;
+        }
+        .field {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        </style>
+</head>
 <body>
-  <h1>hii</h1>
-  <p>hello</p>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="field">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+            <br/>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <Label for="tel">Contact no.</Label>
+            <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+            <div class="field">
+            <label for="address1">Address Line 1:</label>
+            <input type="text" id="address1" name="address1" required>
+            <br/>
+            <label for="address2">Address Line 2:</label>
+            <input type="text" id="address2" name="address2">
+            <br/>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <br/>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+            <br/>
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" pattern="[0-9]{7}" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Account Credential</legend>
+            <div class="field">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+            </div>
+        <button type="submit">Login</button>
+
+        </fieldset>
+    </form>
 </body>
+</html>
